@@ -11,7 +11,7 @@ public class NotesApp {
         Scanner scanner = new Scanner(System.in);
         int choice;
 
-        System.out.println("📓 Welcome to the Notes App");
+        System.out.println(" Welcome to the Notes App");
 
         do {
             System.out.println("\nChoose an option:");
@@ -33,7 +33,7 @@ public class NotesApp {
                     System.out.println("Goodbye!");
                     break;
                 default:
-                    System.out.println("❌ Invalid choice. Please try again.");
+                    System.out.println(" Invalid choice. Please try again.");
             }
         } while (choice != 3);
 
@@ -46,14 +46,14 @@ public class NotesApp {
 
         try (FileWriter writer = new FileWriter(FILE_NAME, true)) {
             writer.write(note + System.lineSeparator());
-            System.out.println("✅ Note saved successfully!");
+            System.out.println(" Note saved successfully!");
         } catch (IOException e) {
-            System.out.println("❌ Error writing to file: " + e.getMessage());
+            System.out.println(" Error writing to file: " + e.getMessage());
         }
     }
 
     private static void viewNotes() {
-        System.out.println("\n📄 Your Notes:");
+        System.out.println("\n Your Notes:");
         try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
             String line;
             int count = 1;
@@ -61,9 +61,9 @@ public class NotesApp {
                 System.out.println(count++ + ". " + line);
             }
         } catch (FileNotFoundException e) {
-            System.out.println("⚠️ No notes found. Start by adding some!");
+            System.out.println(" No notes found. Start by adding some!");
         } catch (IOException e) {
-            System.out.println("❌ Error reading file: " + e.getMessage());
+            System.out.println(" Error reading file: " + e.getMessage());
         }
     }
     }
