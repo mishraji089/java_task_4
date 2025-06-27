@@ -20,7 +20,7 @@ public class NotesApp {
             System.out.println("3. Exit");
             System.out.print("Your choice: ");
             choice = scanner.nextInt();
-            scanner.nextLine(); // clear the newline
+            scanner.nextLine(); 
 
             switch (choice) {
                 case 1:
